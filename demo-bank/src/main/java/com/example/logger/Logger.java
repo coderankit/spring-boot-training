@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Logger {
 
-	@Around("execution(* com.example.account.operations.dao.OperationsDAO.addMoney(..))")
+	@Around("execution(* com.example.account.operations.dao.OperationsDAO.*(..))")
 	public Object log(ProceedingJoinPoint joinPoint) throws Throwable {
 
 		try {
